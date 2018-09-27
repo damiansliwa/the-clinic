@@ -2,12 +2,12 @@
 
 <p>
   <strong>Patient:</strong>
-  <%= @visit.patient %>
+  <%= "#{@visit.patient.name} #{@visit.patient.surname}" %>
 </p>
 
 <p>
   <strong>Doctor:</strong>
-  <%= @visit.doctor %>
+  <%= "#{@visit.doctor.name} #{@visit.doctor.surname}" %>
 </p>
 
 <p>

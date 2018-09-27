@@ -16,8 +16,8 @@
   <tbody>
     <% @visits.each do |visit| %>
       <tr>
-        <td><%= visit.patient %></td>
-        <td><%= visit.doctor %></td>
+        <td><%= "#{visit.patient.name} #{visit.patient.surname}" %></td>
+        <td><%= "#{visit.doctor.name} #{visit.doctor.surname}" %></td>
         <td><%= visit.price %></td>
         <td><%= visit.description %></td>
         <td><%= link_to 'Show', visit %></td>
