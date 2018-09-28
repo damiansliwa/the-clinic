@@ -3,10 +3,10 @@ require 'rails_helper'
 RSpec.describe "visits/edit", type: :view do
   before(:each) do
     @visit = assign(:visit, Visit.create!(
-      :price => 1.5,
-      :description => "MyText",
       :patient => nil,
-      :doctor => nil
+      :doctor => nil,
+      :price => 1.5,
+      :description => "MyText"
     ))
   end
 
@@ -15,13 +15,13 @@ RSpec.describe "visits/edit", type: :view do
 
     assert_select "form[action=?][method=?]", visit_path(@visit), "post" do
 
-      assert_select "input[name=?]", "visit[price]"
-
-      assert_select "textarea[name=?]", "visit[description]"
-
       assert_select "input[name=?]", "visit[patient_id]"
 
       assert_select "input[name=?]", "visit[doctor_id]"
+
+      assert_select "input[name=?]", "visit[price]"
+
+      assert_select "textarea[name=?]", "visit[description]"
     end
   end
 end

@@ -12,6 +12,16 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :patient_id  %>
+    <%= form.collection_select :patient_id, Patient.all, :id, :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :doctor_id %>
+    <%= form.collection_select :doctor_id, Doctor.all, :id, :name %>
+  </div>
+
+  <div class="field">
     <%= form.label :price %>
     <%= form.text_field :price %>
   </div>
@@ -21,17 +31,17 @@
     <%= form.text_area :description %>
   </div>
 
-  <div class="field">
-    <%= form.label :patient_id %>
-    <%= form.text_field :patient_id %>
-  </div>
-
-  <div class="field">
-    <%= form.label :doctor_id %>
-    <%= form.text_field :doctor_id %>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
+  <%#= form.select(:patient, options_for_select([[Patient.find(5).name, 5], [Patient.find(6).name, 6]]), include_blank: true) %>
+
+  <%#= form.select(:patient, options_for_select( Patient.all.map { |p| [p.name, p.id] }), include_blank: true) %>
+
+  <%#= form.collection_select :id, Patient.all, :id, :name %>
+
+  <%#= form.collection_select :patient, Patient.order(:name), :id, :name, prompt: "Choose a Patient" %>
+
 <% end %>
