@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @visit.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @visit.description %>
+</p>
+
+<p>
+  <strong>Patient:</strong>
+  <%= @visit.patient %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @visit.doctor %>
+</p>
+
+<%= link_to 'Edit', edit_visit_path(@visit) %> |
+<%= link_to 'Back', visits_path %>
