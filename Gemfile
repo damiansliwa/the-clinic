@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 # Faker is used to easily generate fake data: names, addresses, phone numbers, etc.
 gem 'faker', '~> 1.9', '>= 1.9.1'
+# Use Devise for authorisation
+gem 'devise', '~> 4.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
